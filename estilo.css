@@ -3,6 +3,8 @@
     padding:0;
 }
 
+
+
 img {
     width: 100px;
     height: auto;
@@ -50,16 +52,32 @@ img {
     box-shadow: none;
 }
 
-#resultado {
-    width: 210px;
-    height: 50px;
-    background-color: #fff;
-    color:rgb(24, 24, 24);
-    font-size: 40px;
-    font-family: 'Expletus Sans', cursive;
-    margin: 5px;
-    text-align: right;
-    padding: 0px;
-    box-shadow: inset 2px 2px rgb(58, 58, 58);
-
+#display {
+    background-color: #f2f0eb;
+    display: grid;
+    border: solid 1px #b5bab6
+    border-radius: 1px;
+    height: 75px;
+    color: var(--blackish);
 }
+
+#display input {
+    display: block;
+    text-align: right;
+    padding: 5px 5px;
+    background: none;
+    font-size: 14px;
+    color: rgb(32, 114, 0);
+    border: none;
+    font-family: 'Expletus Sans', cursive;
+}
+
+#display output {
+    display: block;
+    text-align: right;
+    padding: 0px 5px;
+    background: none;
+    font-weight: bold;
+    font-size: 36px;
+    color: black;
+    font-family: 'Expletus Sans', cursive;}

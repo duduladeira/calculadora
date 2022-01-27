@@ -17,39 +17,43 @@
     <div class="background">
             <div class="calculadora">
             <img src="logo-footer.png">
-            <p id="resultado">1 2 3 4 5 6</p>
+            <section id="display">
+                <input type="text" id="historia" value="2 + 2" disabled>
+                <output name="resultado" id="resultado" for="historia">0</output>
+            </section>    
             <table>
                 <tr>
-                    <td><button class="btn">C</button></td>
-                    <td><button class="btn"><</button></td>
-                    <td><button class="btn">/</button></td>
-                    <td><button class="btn">X</button></td>
+                    <td><button class="btn" onclick="cleartxt()" id="C" >C</button></td>
+                    <td><button class="btn" onclick="removeLastNumber()" id="removerultimo"><</button></td>
+                    <td><button class="btn" onclick="setOperator(this)" id="divisao">/</button></td>
+                    <td><button class="btn" onclick="setOperator(this)" id="multiplicacao">x</button></td>
                 </tr>
                 <tr>
-                    <td><button class="btn">7</button></td>
-                    <td><button class="btn">8</button></td>
-                    <td><button class="btn">9</button></td>
-                    <td><button class="btn">-</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n7">7</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n8">8</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n9">9</button></td>
+                    <td><button class="btn" onclick="setOperator(this)" id="subtrair">-</button></td>
                 </tr>
                 <tr>
-                    <td><button class="btn">4</button></td>
-                    <td><button class="btn">5</button></td>
-                    <td><button class="btn">6</button></td>
-                    <td><button class="btn">+</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n4">4</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n5">5</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n6">6</button></td>
+                    <td><button class="btn" onclick="setOperator(this)" id="soma">+</button></td>
                 </tr>
                 <tr>
-                    <td><button class="btn">1</button></td>
-                    <td><button class="btn">2</button></td>
-                    <td><button class="btn">3</button></td>
-                    <td rowspan="2"><button class="btn" style="height: 102px;">=</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n1">1</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n2">2</button></td>
+                    <td><button class="btn" onclick="writeNumber(this)" id="n3">3</button></td>
+                    <td rowspan="2"><button class="btn" onclick="calculate()" id="calcular" style="height: 102px;">=</button></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><button class="btn" style="width: 102px;">0</button></td>
-                    <td><button class="btn">.</button></td>
+                    <td colspan="2"><button class="btn" onclick="writeNumber(this)" id="n0" style="width: 102px;">0</button></td>
+                    <td><button class="btn" onclick="setDecimal(this,true)" id="ponto">.</button></td>
                </tr>
             </table>
         </div>
     </div>
+    <script src="calc.js"></script>
 </body>
 
 </html>
